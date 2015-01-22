@@ -7318,3 +7318,67 @@ Processing by ArticlesController#show as HTML
   Rendered comments/_form.html.erb (63.1ms)
   Rendered articles/show.html.erb within layouts/application (88.1ms)
 Completed 200 OK in 233ms (Views: 219.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/articles/11" for 127.0.0.1 at 2015-01-23 00:06:46 +0530
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mArticle Load (0.0ms)[0m  [1mSELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35mTag Load (0.0ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."article_id" = ?  [["article_id", 11]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments"  WHERE "comments"."article_id" = ?[0m  [["article_id", 11]]
+  Rendered articles/_comment.html.erb (0.0ms)
+  Rendered comments/_form.html.erb (3.0ms)
+  Rendered articles/show.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 160ms (Views: 156.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-23 00:06:46 +0530
+
+
+Started GET "/assets/screen.css?body=1" for 127.0.0.1 at 2015-01-23 00:06:46 +0530
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2015-01-23 00:06:46 +0530
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2015-01-23 00:06:46 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-23 00:06:47 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-23 00:06:47 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-23 00:06:47 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-23 00:06:47 +0530
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2015-01-23 00:06:47 +0530
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-23 00:06:47 +0530
+
+
+Started GET "/assets/tags.js?body=1" for 127.0.0.1 at 2015-01-23 00:06:47 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-23 00:06:47 +0530
+
+
+Started GET "/tags/5" for 127.0.0.1 at 2015-01-23 00:06:49 +0530
+Processing by TagsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mTag Load (2.0ms)[0m  SELECT  "tags".* FROM "tags"  WHERE "tags"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mArticle Load (0.0ms)[0m  [1mSELECT "articles".* FROM "articles" INNER JOIN "taggings" ON "articles"."id" = "taggings"."article_id" WHERE "taggings"."tag_id" = ?[0m  [["tag_id", 5]]
+  Rendered tags/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 148ms (Views: 145.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/tags" for 127.0.0.1 at 2015-01-23 00:06:51 +0530
+Processing by TagsController#index as HTML
+  [1m[35mTag Load (0.0ms)[0m  SELECT "tags".* FROM "tags"
+  Rendered tags/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 135ms (Views: 134.1ms | ActiveRecord: 0.0ms)
