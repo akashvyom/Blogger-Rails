@@ -24,6 +24,17 @@ ActiveRecord::Schema.define(version: 20150122213436) do
     t.datetime "image_uploaded_at"
   end
 
+  create_table "authors", force: true do |t|
+    t.string   "username",         null: false
+    t.string   "email",            null: false
+    t.string   "crypted_password", null: false
+    t.string   "salt",             null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "authors", ["email"], name: "index_authors_on_email", unique: true
+
   create_table "comments", force: true do |t|
     t.string   "author_name"
     t.text     "body"
