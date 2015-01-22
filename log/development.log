@@ -9778,3 +9778,335 @@ Started GET "/assets/tags.js?body=1" for 127.0.0.1 at 2015-01-22 17:07:24 +0530
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-22 17:07:24 +0530
+
+
+Started GET "/articles" for 127.0.0.1 at 2015-01-22 17:27:17 +0530
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (1.0ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (14.0ms)
+  [1m[35mAuthor Load (1.0ms)[0m  SELECT  "authors".* FROM "authors"  WHERE "authors"."id" = 1 LIMIT 1
+Completed 200 OK in 194ms (Views: 180.2ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2015-01-22 17:27:18 +0530
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-22 17:27:18 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-22 17:27:18 +0530
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2015-01-22 17:27:18 +0530
+
+
+Started GET "/assets/screen.css?body=1" for 127.0.0.1 at 2015-01-22 17:27:18 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-22 17:27:18 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-22 17:27:18 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-22 17:27:18 +0530
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2015-01-22 17:27:18 +0530
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-22 17:27:18 +0530
+
+
+Started GET "/assets/tags.js?body=1" for 127.0.0.1 at 2015-01-22 17:27:18 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-22 17:27:18 +0530
+
+
+Started GET "/logout" for 127.0.0.1 at 2015-01-22 17:27:21 +0530
+Processing by AuthorSessionsController#destroy as HTML
+  [1m[36mAuthor Load (1.0ms)[0m  [1mSELECT  "authors".* FROM "authors"  WHERE "authors"."id" = 1 LIMIT 1[0m
+Redirected to http://localhost:3000/authors
+Completed 302 Found in 4ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/authors" for 127.0.0.1 at 2015-01-22 17:27:21 +0530
+Processing by AuthorsController#index as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2015-01-22 17:27:21 +0530
+Processing by AuthorSessionsController#new as HTML
+  Rendered author_sessions/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 174ms (Views: 173.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2015-01-22 17:27:27 +0530
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.0ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 145ms (Views: 144.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2015-01-22 17:27:28 +0530
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-22 17:27:28 +0530
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2015-01-22 17:27:28 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-22 17:27:28 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-22 17:27:28 +0530
+
+
+Started GET "/assets/screen.css?body=1" for 127.0.0.1 at 2015-01-22 17:27:28 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-22 17:27:28 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-22 17:27:28 +0530
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2015-01-22 17:27:28 +0530
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-22 17:27:28 +0530
+
+
+Started GET "/assets/tags.js?body=1" for 127.0.0.1 at 2015-01-22 17:27:28 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-22 17:27:28 +0530
+
+
+Started GET "/articles/4" for 127.0.0.1 at 2015-01-22 17:27:30 +0530
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.0ms)[0m  [1mSELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mTag Load (0.0ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."article_id" = ?  [["article_id", 4]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments"  WHERE "comments"."article_id" = ?[0m  [["article_id", 4]]
+  [1m[35mComment Load (0.0ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."article_id" = ?  [["article_id", 4]]
+  Rendered articles/_comment.html.erb (1.0ms)
+  Rendered comments/_form.html.erb (3.0ms)
+  Rendered articles/show.html.erb within layouts/application (39.0ms)
+Completed 200 OK in 188ms (Views: 173.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/tags/2" for 127.0.0.1 at 2015-01-22 17:27:33 +0530
+Processing by TagsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT  "tags".* FROM "tags"  WHERE "tags"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mArticle Load (1.0ms)[0m  SELECT "articles".* FROM "articles" INNER JOIN "taggings" ON "articles"."id" = "taggings"."article_id" WHERE "taggings"."tag_id" = ?  [["tag_id", 2]]
+  Rendered tags/show.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 150ms (Views: 146.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2015-01-22 17:27:38 +0530
+Processing by AuthorSessionsController#new as HTML
+  Rendered author_sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 138ms (Views: 138.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/author_sessions" for 127.0.0.1 at 2015-01-22 17:27:40 +0530
+Processing by AuthorSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"u1LSKDpx8CfiRzaR/hbkgByFhoCm5AfiSEkgC1IiNoM=", "email"=>"vyomsrivastav@gmail.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mAuthor Load (0.0ms)[0m  [1mSELECT  "authors".* FROM "authors"  WHERE "authors"."email" = 'vyomsrivastav@gmail.com'  ORDER BY "authors"."id" ASC LIMIT 1[0m
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 239ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2015-01-22 17:27:40 +0530
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (1.0ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html.erb within layouts/application (4.0ms)
+  [1m[36mAuthor Load (1.0ms)[0m  [1mSELECT  "authors".* FROM "authors"  WHERE "authors"."id" = 1 LIMIT 1[0m
+Completed 200 OK in 155ms (Views: 151.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-22 17:27:40 +0530
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2015-01-22 17:27:40 +0530
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2015-01-22 17:27:41 +0530
+
+
+Started GET "/assets/screen.css?body=1" for 127.0.0.1 at 2015-01-22 17:27:41 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-22 17:27:41 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-22 17:27:41 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-22 17:27:41 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-22 17:27:41 +0530
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2015-01-22 17:27:41 +0530
+
+
+Started GET "/assets/tags.js?body=1" for 127.0.0.1 at 2015-01-22 17:27:41 +0530
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-22 17:27:41 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-22 17:27:41 +0530
+
+
+Started GET "/articles/4" for 127.0.0.1 at 2015-01-22 17:27:44 +0530
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mArticle Load (0.0ms)[0m  SELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."article_id" = ?[0m  [["article_id", 4]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments"  WHERE "comments"."article_id" = ?  [["article_id", 4]]
+  [1m[36mComment Load (1.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."article_id" = ?[0m  [["article_id", 4]]
+  Rendered articles/_comment.html.erb (1.0ms)
+  Rendered comments/_form.html.erb (2.0ms)
+  Rendered articles/show.html.erb within layouts/application (18.0ms)
+  [1m[35mAuthor Load (0.0ms)[0m  SELECT  "authors".* FROM "authors"  WHERE "authors"."id" = 1 LIMIT 1
+Completed 200 OK in 160ms (Views: 157.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/tags/2" for 127.0.0.1 at 2015-01-22 17:27:46 +0530
+Processing by TagsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT  "tags".* FROM "tags"  WHERE "tags"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mArticle Load (0.0ms)[0m  SELECT "articles".* FROM "articles" INNER JOIN "taggings" ON "articles"."id" = "taggings"."article_id" WHERE "taggings"."tag_id" = ?  [["tag_id", 2]]
+  Rendered tags/show.html.erb within layouts/application (2.0ms)
+  [1m[36mAuthor Load (0.0ms)[0m  [1mSELECT  "authors".* FROM "authors"  WHERE "authors"."id" = 1 LIMIT 1[0m
+Completed 200 OK in 144ms (Views: 142.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tags" for 127.0.0.1 at 2015-01-22 17:27:48 +0530
+Processing by TagsController#index as HTML
+  [1m[35mTag Load (0.0ms)[0m  SELECT "tags".* FROM "tags"
+  Rendered tags/index.html.erb within layouts/application (4.0ms)
+  [1m[36mAuthor Load (1.0ms)[0m  [1mSELECT  "authors".* FROM "authors"  WHERE "authors"."id" = 1 LIMIT 1[0m
+Completed 200 OK in 147ms (Views: 145.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2015-01-22 17:27:54 +0530
+Processing by AuthorSessionsController#destroy as HTML
+  [1m[35mAuthor Load (0.0ms)[0m  SELECT  "authors".* FROM "authors"  WHERE "authors"."id" = 1 LIMIT 1
+Redirected to http://localhost:3000/authors
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/authors" for 127.0.0.1 at 2015-01-22 17:27:54 +0530
+Processing by AuthorsController#index as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2015-01-22 17:27:54 +0530
+Processing by AuthorSessionsController#new as HTML
+  Rendered author_sessions/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 139ms (Views: 138.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tags" for 127.0.0.1 at 2015-01-22 17:27:58 +0530
+Processing by TagsController#index as HTML
+  [1m[36mTag Load (1.0ms)[0m  [1mSELECT "tags".* FROM "tags"[0m
+  Rendered tags/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 204ms (Views: 202.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2015-01-22 17:27:58 +0530
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-22 17:27:58 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-22 17:27:58 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-22 17:27:58 +0530
+
+
+Started GET "/assets/screen.css?body=1" for 127.0.0.1 at 2015-01-22 17:27:58 +0530
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2015-01-22 17:27:58 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-22 17:27:59 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-22 17:27:59 +0530
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2015-01-22 17:27:59 +0530
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-22 17:27:59 +0530
+
+
+Started GET "/assets/tags.js?body=1" for 127.0.0.1 at 2015-01-22 17:27:59 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-22 17:27:59 +0530
+
+
+Started DELETE "/tags/2" for 127.0.0.1 at 2015-01-22 17:28:03 +0530
+Processing by TagsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"oY+PCZW1hX+QY0duk5uyGFy5WyfjAqnlV5FW+R9gtaI=", "id"=>"2"}
+Redirected to http://localhost:3000/login
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2015-01-22 17:28:03 +0530
+Processing by AuthorSessionsController#new as HTML
+  Rendered author_sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 150ms (Views: 149.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2015-01-22 17:28:03 +0530
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-22 17:28:04 +0530
+
+
+Started GET "/assets/screen.css?body=1" for 127.0.0.1 at 2015-01-22 17:28:04 +0530
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2015-01-22 17:28:04 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-22 17:28:04 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-22 17:28:04 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-22 17:28:04 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-22 17:28:04 +0530
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2015-01-22 17:28:04 +0530
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-22 17:28:04 +0530
+
+
+Started GET "/assets/tags.js?body=1" for 127.0.0.1 at 2015-01-22 17:28:04 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-22 17:28:04 +0530

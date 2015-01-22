@@ -1,6 +1,14 @@
 class AuthorsController < ApplicationController
   before_action :set_author, only: [:show, :edit, :update, :destroy]
   before_filter :zero_authors_or_authenticated, only: [:new,:create]
+  before_filter :require_login, except: [:new,:create]
+  
+  def require_login
+    unless logged_in?
+      flash[:error] = "You must be logged in to access this section"
+      redirect_to login_path
+    end
+  end
   
   def zero_authors_or_authenticated
   unless Author.count == 0 || current_user
