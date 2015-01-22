@@ -7382,3 +7382,1591 @@ Processing by TagsController#index as HTML
   [1m[35mTag Load (0.0ms)[0m  SELECT "tags".* FROM "tags"
   Rendered tags/index.html.erb within layouts/application (3.0ms)
 Completed 200 OK in 135ms (Views: 134.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2015-01-23 00:12:12 +0530
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.0ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 147ms (Views: 146.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2015-01-23 00:12:12 +0530
+
+
+Started GET "/assets/screen.css?body=1" for 127.0.0.1 at 2015-01-23 00:12:12 +0530
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-23 00:12:12 +0530
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2015-01-23 00:12:13 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-23 00:12:13 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-23 00:12:13 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-23 00:12:13 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-23 00:12:13 +0530
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2015-01-23 00:12:13 +0530
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-23 00:12:13 +0530
+
+
+Started GET "/assets/tags.js?body=1" for 127.0.0.1 at 2015-01-23 00:12:13 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-23 00:12:13 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddPaperclipFieldsToArticle (20150122213436)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (38.0ms)[0m  [1mALTER TABLE "articles" ADD "image_file_name" varchar(255)[0m
+  [1m[35m (0.0ms)[0m  ALTER TABLE "articles" ADD "image_file_type" varchar(255)
+  [1m[36m (1.0ms)[0m  [1mALTER TABLE "articles" ADD "image_file_size" integer[0m
+  [1m[35m (0.0ms)[0m  ALTER TABLE "articles" ADD "image_uploaded_at" datetime
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150122213436"]]
+  [1m[35m (159.1ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_article_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_article_id' AND type='index'
+
+  [1m[36m (1.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_taggings_on_tag_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_taggings_on_tag_id' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_taggings_on_article_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_taggings_on_article_id' AND type='index'
+
+
+
+Started GET "/articles" for 127.0.0.1 at 2015-01-23 03:14:13 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (1.0ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html.erb within layouts/application (41.0ms)
+Completed 200 OK in 1117ms (Views: 1011.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-23 03:14:14 +0530
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-23 03:14:14 +0530
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2015-01-23 03:14:14 +0530
+
+
+Started GET "/assets/screen.css?body=1" for 127.0.0.1 at 2015-01-23 03:14:14 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-23 03:14:14 +0530
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2015-01-23 03:14:14 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-23 03:14:15 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-23 03:14:15 +0530
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2015-01-23 03:14:15 +0530
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-23 03:14:15 +0530
+
+
+Started GET "/assets/tags.js?body=1" for 127.0.0.1 at 2015-01-23 03:14:15 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-23 03:14:15 +0530
+
+
+Started GET "/articles/4" for 127.0.0.1 at 2015-01-23 03:15:02 +0530
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.0ms)[0m  [1mSELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mTag Load (0.0ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."article_id" = ?  [["article_id", 4]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments"  WHERE "comments"."article_id" = ?[0m  [["article_id", 4]]
+  [1m[35mComment Load (1.0ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."article_id" = ?  [["article_id", 4]]
+  Rendered articles/_comment.html.erb (60.1ms)
+  Rendered comments/_form.html.erb (145.1ms)
+  Rendered articles/show.html.erb within layouts/application (646.6ms)
+Completed 200 OK in 847ms (Views: 795.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/articles/4/edit" for 127.0.0.1 at 2015-01-23 03:15:05 +0530
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.0ms)[0m  [1mSELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mTag Load (0.0ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."article_id" = ?  [["article_id", 4]]
+  Rendered articles/_form.html.erb (79.1ms)
+  Rendered articles/edit.html.erb within layouts/application (82.1ms)
+Completed 200 OK in 235ms (Views: 233.2ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/articles/4" for 127.0.0.1 at 2015-01-23 03:16:40 +0530
+Processing by ArticlesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0mGd2fTnx8GnDW93JvA5Opq2G1riUTpzLCUV38PCRB0=", "article"=>{"title"=>"Laptops", "body"=>"It is a computer build in one piece", "tag_list"=>"tag2, tag4", "image"=>#<ActionDispatch::Http::UploadedFile:0x4bbd240 @tempfile=#<File:C:/Users/VIPULS~1/AppData/Local/Temp/RackMultipart20150123-7688-dewc3q>, @original_filename="download.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"article[image]\"; filename=\"download.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Update Article", "id"=>"4"}
+  [1m[36mArticle Load (1.0ms)[0m  [1mSELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mTag Load (1.0ms)[0m  [1mSELECT  "tags".* FROM "tags"  WHERE "tags"."name" = 'tag2' LIMIT 1[0m
+  [1m[35mTag Load (0.0ms)[0m  SELECT  "tags".* FROM "tags"  WHERE "tags"."name" = 'tag4' LIMIT 1
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."article_id" = ?[0m  [["article_id", 4]]
+Command :: file -b --mime "C:/Users/VIPULS~1/AppData/Local/Temp/fd456406745d816a45cae554c788e75420150123-7688-whh4h9.jpg"
+[paperclip] Content Type Spoof: Filename download.jpg (["image/jpeg"]), content type discovered from file command: . See documentation to allow this combination.
+  [1m[35m (0.0ms)[0m  rollback transaction
+Completed 500 Internal Server Error in 201ms
+
+NoMethodError (undefined method `image_content_type' for #<Article:0x4bb83f8>):
+  app/controllers/articles_controller.rb:38:in `update'
+
+
+  Rendered c:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered c:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered c:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered c:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (164.1ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to AddPaperclipFieldsToArticle (20150122213436)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (2.0ms)[0m  CREATE TEMPORARY TABLE "aarticles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "body" text, "created_at" datetime, "updated_at" datetime, "image_file_name" varchar(255), "image_file_type" varchar(255), "image_file_size" integer, "image_uploaded_at" datetime) 
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "articles"[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "aarticles" ("id","title","body","created_at","updated_at","image_file_name","image_file_type","image_file_size","image_uploaded_at") VALUES (4, 'Laptops', 'It is a computer build in one piece', '2015-01-18 16:07:09.255069', '2015-01-18 16:41:41.791975', NULL, NULL, NULL, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "aarticles" ("id","title","body","created_at","updated_at","image_file_name","image_file_type","image_file_size","image_uploaded_at") VALUES (6, 'Paper', 'It is a thin sheet made of wood', '2015-01-18 16:46:38.146783', '2015-01-18 16:46:38.146783', NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "aarticles" ("id","title","body","created_at","updated_at","image_file_name","image_file_type","image_file_size","image_uploaded_at") VALUES (8, 'Aka', 'kas', '2015-01-20 17:38:22.547967', '2015-01-20 17:38:22.547967', NULL, NULL, NULL, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "aarticles" ("id","title","body","created_at","updated_at","image_file_name","image_file_type","image_file_size","image_uploaded_at") VALUES (9, 'Plastic', 'jklas', '2015-01-22 11:01:56.828209', '2015-01-22 11:01:56.828209', NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "aarticles" ("id","title","body","created_at","updated_at","image_file_name","image_file_type","image_file_size","image_uploaded_at") VALUES (10, 'Box', 'Boox', '2015-01-22 11:08:13.477034', '2015-01-22 11:08:13.477034', NULL, NULL, NULL, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "aarticles" ("id","title","body","created_at","updated_at","image_file_name","image_file_type","image_file_size","image_uploaded_at") VALUES (11, 'H', 'hj', '2015-01-22 17:52:43.340195', '2015-01-22 17:52:43.340195', NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.0ms)[0m  DROP TABLE "articles"
+  [1m[36m (1.0ms)[0m  [1mCREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "body" text, "created_at" datetime, "updated_at" datetime, "image_file_name" varchar(255), "image_file_type" varchar(255), "image_file_size" integer) [0m
+  [1m[35m (0.0ms)[0m  SELECT * FROM "aarticles"
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "articles" ("id","title","body","created_at","updated_at","image_file_name","image_file_type","image_file_size") VALUES (4, 'Laptops', 'It is a computer build in one piece', '2015-01-18 16:07:09.255069', '2015-01-18 16:41:41.791975', NULL, NULL, NULL)[0m
+  [1m[35m (1.0ms)[0m  INSERT INTO "articles" ("id","title","body","created_at","updated_at","image_file_name","image_file_type","image_file_size") VALUES (6, 'Paper', 'It is a thin sheet made of wood', '2015-01-18 16:46:38.146783', '2015-01-18 16:46:38.146783', NULL, NULL, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "articles" ("id","title","body","created_at","updated_at","image_file_name","image_file_type","image_file_size") VALUES (8, 'Aka', 'kas', '2015-01-20 17:38:22.547967', '2015-01-20 17:38:22.547967', NULL, NULL, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "articles" ("id","title","body","created_at","updated_at","image_file_name","image_file_type","image_file_size") VALUES (9, 'Plastic', 'jklas', '2015-01-22 11:01:56.828209', '2015-01-22 11:01:56.828209', NULL, NULL, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "articles" ("id","title","body","created_at","updated_at","image_file_name","image_file_type","image_file_size") VALUES (10, 'Box', 'Boox', '2015-01-22 11:08:13.477034', '2015-01-22 11:08:13.477034', NULL, NULL, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "articles" ("id","title","body","created_at","updated_at","image_file_name","image_file_type","image_file_size") VALUES (11, 'H', 'hj', '2015-01-22 17:52:43.340195', '2015-01-22 17:52:43.340195', NULL, NULL, NULL)
+  [1m[36m (1.0ms)[0m  [1mDROP TABLE "aarticles"[0m
+  [1m[35m (1.0ms)[0m  CREATE TEMPORARY TABLE "aarticles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "body" text, "created_at" datetime, "updated_at" datetime, "image_file_name" varchar(255), "image_file_type" varchar(255), "image_file_size" integer) 
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "articles"[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "aarticles" ("id","title","body","created_at","updated_at","image_file_name","image_file_type","image_file_size") VALUES (4, 'Laptops', 'It is a computer build in one piece', '2015-01-18 16:07:09.255069', '2015-01-18 16:41:41.791975', NULL, NULL, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "aarticles" ("id","title","body","created_at","updated_at","image_file_name","image_file_type","image_file_size") VALUES (6, 'Paper', 'It is a thin sheet made of wood', '2015-01-18 16:46:38.146783', '2015-01-18 16:46:38.146783', NULL, NULL, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "aarticles" ("id","title","body","created_at","updated_at","image_file_name","image_file_type","image_file_size") VALUES (8, 'Aka', 'kas', '2015-01-20 17:38:22.547967', '2015-01-20 17:38:22.547967', NULL, NULL, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "aarticles" ("id","title","body","created_at","updated_at","image_file_name","image_file_type","image_file_size") VALUES (9, 'Plastic', 'jklas', '2015-01-22 11:01:56.828209', '2015-01-22 11:01:56.828209', NULL, NULL, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "aarticles" ("id","title","body","created_at","updated_at","image_file_name","image_file_type","image_file_size") VALUES (10, 'Box', 'Boox', '2015-01-22 11:08:13.477034', '2015-01-22 11:08:13.477034', NULL, NULL, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "aarticles" ("id","title","body","created_at","updated_at","image_file_name","image_file_type","image_file_size") VALUES (11, 'H', 'hj', '2015-01-22 17:52:43.340195', '2015-01-22 17:52:43.340195', NULL, NULL, NULL)[0m
+  [1m[35m (1.0ms)[0m  DROP TABLE "articles"
+  [1m[36m (0.0ms)[0m  [1mCREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "body" text, "created_at" datetime, "updated_at" datetime, "image_file_name" varchar(255), "image_file_type" varchar(255)) [0m
+  [1m[35m (0.0ms)[0m  SELECT * FROM "aarticles"
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "articles" ("id","title","body","created_at","updated_at","image_file_name","image_file_type") VALUES (4, 'Laptops', 'It is a computer build in one piece', '2015-01-18 16:07:09.255069', '2015-01-18 16:41:41.791975', NULL, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "articles" ("id","title","body","created_at","updated_at","image_file_name","image_file_type") VALUES (6, 'Paper', 'It is a thin sheet made of wood', '2015-01-18 16:46:38.146783', '2015-01-18 16:46:38.146783', NULL, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "articles" ("id","title","body","created_at","updated_at","image_file_name","image_file_type") VALUES (8, 'Aka', 'kas', '2015-01-20 17:38:22.547967', '2015-01-20 17:38:22.547967', NULL, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "articles" ("id","title","body","created_at","updated_at","image_file_name","image_file_type") VALUES (9, 'Plastic', 'jklas', '2015-01-22 11:01:56.828209', '2015-01-22 11:01:56.828209', NULL, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "articles" ("id","title","body","created_at","updated_at","image_file_name","image_file_type") VALUES (10, 'Box', 'Boox', '2015-01-22 11:08:13.477034', '2015-01-22 11:08:13.477034', NULL, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "articles" ("id","title","body","created_at","updated_at","image_file_name","image_file_type") VALUES (11, 'H', 'hj', '2015-01-22 17:52:43.340195', '2015-01-22 17:52:43.340195', NULL, NULL)
+  [1m[36m (1.0ms)[0m  [1mDROP TABLE "aarticles"[0m
+  [1m[35m (0.0ms)[0m  CREATE TEMPORARY TABLE "aarticles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "body" text, "created_at" datetime, "updated_at" datetime, "image_file_name" varchar(255), "image_file_type" varchar(255)) 
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "articles"[0m
+  [1m[35m (1.0ms)[0m  INSERT INTO "aarticles" ("id","title","body","created_at","updated_at","image_file_name","image_file_type") VALUES (4, 'Laptops', 'It is a computer build in one piece', '2015-01-18 16:07:09.255069', '2015-01-18 16:41:41.791975', NULL, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "aarticles" ("id","title","body","created_at","updated_at","image_file_name","image_file_type") VALUES (6, 'Paper', 'It is a thin sheet made of wood', '2015-01-18 16:46:38.146783', '2015-01-18 16:46:38.146783', NULL, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "aarticles" ("id","title","body","created_at","updated_at","image_file_name","image_file_type") VALUES (8, 'Aka', 'kas', '2015-01-20 17:38:22.547967', '2015-01-20 17:38:22.547967', NULL, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "aarticles" ("id","title","body","created_at","updated_at","image_file_name","image_file_type") VALUES (9, 'Plastic', 'jklas', '2015-01-22 11:01:56.828209', '2015-01-22 11:01:56.828209', NULL, NULL)[0m
+  [1m[35m (1.0ms)[0m  INSERT INTO "aarticles" ("id","title","body","created_at","updated_at","image_file_name","image_file_type") VALUES (10, 'Box', 'Boox', '2015-01-22 11:08:13.477034', '2015-01-22 11:08:13.477034', NULL, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "aarticles" ("id","title","body","created_at","updated_at","image_file_name","image_file_type") VALUES (11, 'H', 'hj', '2015-01-22 17:52:43.340195', '2015-01-22 17:52:43.340195', NULL, NULL)[0m
+  [1m[35m (0.0ms)[0m  DROP TABLE "articles"
+  [1m[36m (0.0ms)[0m  [1mCREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "body" text, "created_at" datetime, "updated_at" datetime, "image_file_name" varchar(255)) [0m
+  [1m[35m (0.0ms)[0m  SELECT * FROM "aarticles"
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "articles" ("id","title","body","created_at","updated_at","image_file_name") VALUES (4, 'Laptops', 'It is a computer build in one piece', '2015-01-18 16:07:09.255069', '2015-01-18 16:41:41.791975', NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "articles" ("id","title","body","created_at","updated_at","image_file_name") VALUES (6, 'Paper', 'It is a thin sheet made of wood', '2015-01-18 16:46:38.146783', '2015-01-18 16:46:38.146783', NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "articles" ("id","title","body","created_at","updated_at","image_file_name") VALUES (8, 'Aka', 'kas', '2015-01-20 17:38:22.547967', '2015-01-20 17:38:22.547967', NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "articles" ("id","title","body","created_at","updated_at","image_file_name") VALUES (9, 'Plastic', 'jklas', '2015-01-22 11:01:56.828209', '2015-01-22 11:01:56.828209', NULL)
+  [1m[36m (1.0ms)[0m  [1mINSERT INTO "articles" ("id","title","body","created_at","updated_at","image_file_name") VALUES (10, 'Box', 'Boox', '2015-01-22 11:08:13.477034', '2015-01-22 11:08:13.477034', NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "articles" ("id","title","body","created_at","updated_at","image_file_name") VALUES (11, 'H', 'hj', '2015-01-22 17:52:43.340195', '2015-01-22 17:52:43.340195', NULL)
+  [1m[36m (0.0ms)[0m  [1mDROP TABLE "aarticles"[0m
+  [1m[35m (0.0ms)[0m  CREATE TEMPORARY TABLE "aarticles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "body" text, "created_at" datetime, "updated_at" datetime, "image_file_name" varchar(255)) 
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "articles"[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "aarticles" ("id","title","body","created_at","updated_at","image_file_name") VALUES (4, 'Laptops', 'It is a computer build in one piece', '2015-01-18 16:07:09.255069', '2015-01-18 16:41:41.791975', NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "aarticles" ("id","title","body","created_at","updated_at","image_file_name") VALUES (6, 'Paper', 'It is a thin sheet made of wood', '2015-01-18 16:46:38.146783', '2015-01-18 16:46:38.146783', NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "aarticles" ("id","title","body","created_at","updated_at","image_file_name") VALUES (8, 'Aka', 'kas', '2015-01-20 17:38:22.547967', '2015-01-20 17:38:22.547967', NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "aarticles" ("id","title","body","created_at","updated_at","image_file_name") VALUES (9, 'Plastic', 'jklas', '2015-01-22 11:01:56.828209', '2015-01-22 11:01:56.828209', NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "aarticles" ("id","title","body","created_at","updated_at","image_file_name") VALUES (10, 'Box', 'Boox', '2015-01-22 11:08:13.477034', '2015-01-22 11:08:13.477034', NULL)
+  [1m[36m (1.0ms)[0m  [1mINSERT INTO "aarticles" ("id","title","body","created_at","updated_at","image_file_name") VALUES (11, 'H', 'hj', '2015-01-22 17:52:43.340195', '2015-01-22 17:52:43.340195', NULL)[0m
+  [1m[35m (0.0ms)[0m  DROP TABLE "articles"
+  [1m[36m (0.0ms)[0m  [1mCREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "body" text, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.0ms)[0m  SELECT * FROM "aarticles"
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "articles" ("id","title","body","created_at","updated_at") VALUES (4, 'Laptops', 'It is a computer build in one piece', '2015-01-18 16:07:09.255069', '2015-01-18 16:41:41.791975')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "articles" ("id","title","body","created_at","updated_at") VALUES (6, 'Paper', 'It is a thin sheet made of wood', '2015-01-18 16:46:38.146783', '2015-01-18 16:46:38.146783')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "articles" ("id","title","body","created_at","updated_at") VALUES (8, 'Aka', 'kas', '2015-01-20 17:38:22.547967', '2015-01-20 17:38:22.547967')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "articles" ("id","title","body","created_at","updated_at") VALUES (9, 'Plastic', 'jklas', '2015-01-22 11:01:56.828209', '2015-01-22 11:01:56.828209')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "articles" ("id","title","body","created_at","updated_at") VALUES (10, 'Box', 'Boox', '2015-01-22 11:08:13.477034', '2015-01-22 11:08:13.477034')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "articles" ("id","title","body","created_at","updated_at") VALUES (11, 'H', 'hj', '2015-01-22 17:52:43.340195', '2015-01-22 17:52:43.340195')
+  [1m[36m (0.0ms)[0m  [1mDROP TABLE "aarticles"[0m
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20150122213436'
+  [1m[36m (314.3ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_article_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_article_id' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_taggings_on_tag_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_taggings_on_tag_id' AND type='index'
+
+  [1m[36m (0.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_taggings_on_article_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_taggings_on_article_id' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddPaperclipFieldsToArticle (20150122213436)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (1.0ms)[0m  [1mALTER TABLE "articles" ADD "image_file_name" varchar(255)[0m
+  [1m[35m (0.0ms)[0m  ALTER TABLE "articles" ADD "image_content_type" varchar(255)
+  [1m[36m (0.0ms)[0m  [1mALTER TABLE "articles" ADD "image_file_size" integer[0m
+  [1m[35m (0.0ms)[0m  ALTER TABLE "articles" ADD "image_uploaded_at" datetime
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150122213436"]]
+  [1m[35m (131.1ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_article_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_article_id' AND type='index'
+
+  [1m[36m (0.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_taggings_on_tag_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_taggings_on_tag_id' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_taggings_on_article_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_taggings_on_article_id' AND type='index'
+
+
+
+Started PATCH "/articles/4" for 127.0.0.1 at 2015-01-22 15:26:43 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArticlesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0mGd2fTnx8GnDW93JvA5Opq2G1riUTpzLCUV38PCRB0=", "article"=>{"title"=>"Laptops", "body"=>"It is a computer build in one piece", "tag_list"=>"tag2, tag4", "image"=>#<ActionDispatch::Http::UploadedFile:0x4b5ee30 @tempfile=#<File:C:/Users/VIPULS~1/AppData/Local/Temp/RackMultipart20150122-7688-14qjrl6>, @original_filename="download.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"article[image]\"; filename=\"download.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Update Article", "id"=>"4"}
+  [1m[35mArticle Load (1.0ms)[0m  SELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mTag Load (0.0ms)[0m  SELECT  "tags".* FROM "tags"  WHERE "tags"."name" = 'tag2' LIMIT 1
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT  "tags".* FROM "tags"  WHERE "tags"."name" = 'tag4' LIMIT 1[0m
+  [1m[35mTag Load (1.0ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."article_id" = ?  [["article_id", 4]]
+Command :: file -b --mime "C:/Users/VIPULS~1/AppData/Local/Temp/fd456406745d816a45cae554c788e75420150122-7688-15zchaf.jpg"
+[paperclip] Content Type Spoof: Filename download.jpg (["image/jpeg"]), content type discovered from file command: . See documentation to allow this combination.
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+Completed 500 Internal Server Error in 133ms
+
+NoMethodError (undefined method `image_content_type' for #<Article:0x2908fe0>):
+  app/controllers/articles_controller.rb:38:in `update'
+
+
+  Rendered c:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered c:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered c:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered c:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (133.1ms)
+
+
+Started GET "/articles/4/edit" for 127.0.0.1 at 2015-01-22 15:26:49 +0530
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mArticle Load (1.0ms)[0m  SELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."article_id" = ?[0m  [["article_id", 4]]
+  Rendered articles/_form.html.erb (8.0ms)
+  Rendered articles/edit.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 157ms (Views: 155.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-22 15:26:49 +0530
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2015-01-22 15:26:49 +0530
+
+
+Started GET "/assets/screen.css?body=1" for 127.0.0.1 at 2015-01-22 15:26:49 +0530
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2015-01-22 15:26:49 +0530
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-22 15:26:49 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-22 15:26:49 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-22 15:26:49 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-22 15:26:49 +0530
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2015-01-22 15:26:49 +0530
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-22 15:26:49 +0530
+
+
+Started GET "/assets/tags.js?body=1" for 127.0.0.1 at 2015-01-22 15:26:49 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-22 15:26:50 +0530
+
+
+Started PATCH "/articles/4" for 127.0.0.1 at 2015-01-22 15:26:58 +0530
+Processing by ArticlesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0mGd2fTnx8GnDW93JvA5Opq2G1riUTpzLCUV38PCRB0=", "article"=>{"title"=>"Laptops", "body"=>"It is a computer build in one piece", "tag_list"=>"tag2, tag4", "image"=>#<ActionDispatch::Http::UploadedFile:0x4b94020 @tempfile=#<File:C:/Users/VIPULS~1/AppData/Local/Temp/RackMultipart20150122-7688-y4ocvc>, @original_filename="download.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"article[image]\"; filename=\"download.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Update Article", "id"=>"4"}
+  [1m[35mArticle Load (0.0ms)[0m  SELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mTag Load (0.0ms)[0m  SELECT  "tags".* FROM "tags"  WHERE "tags"."name" = 'tag2' LIMIT 1
+  [1m[36mTag Load (1.0ms)[0m  [1mSELECT  "tags".* FROM "tags"  WHERE "tags"."name" = 'tag4' LIMIT 1[0m
+  [1m[35mTag Load (1.0ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."article_id" = ?  [["article_id", 4]]
+Command :: file -b --mime "C:/Users/VIPULS~1/AppData/Local/Temp/fd456406745d816a45cae554c788e75420150122-7688-xay7yg.jpg"
+[paperclip] Content Type Spoof: Filename download.jpg (["image/jpeg"]), content type discovered from file command: . See documentation to allow this combination.
+  [1m[36m (2.0ms)[0m  [1mrollback transaction[0m
+Completed 500 Internal Server Error in 191ms
+
+NoMethodError (undefined method `image_content_type' for #<Article:0x4c0f818>):
+  app/controllers/articles_controller.rb:38:in `update'
+
+
+  Rendered c:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered c:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered c:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered c:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (137.1ms)
+
+
+Started PATCH "/articles/4" for 127.0.0.1 at 2015-01-22 15:28:38 +0530
+Processing by ArticlesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0mGd2fTnx8GnDW93JvA5Opq2G1riUTpzLCUV38PCRB0=", "article"=>{"title"=>"Laptops", "body"=>"It is a computer build in one piece", "tag_list"=>"tag2, tag4", "image"=>#<ActionDispatch::Http::UploadedFile:0x4b41688 @tempfile=#<File:C:/Users/VIPULS~1/AppData/Local/Temp/RackMultipart20150122-7688-1w3jhxf>, @original_filename="download.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"article[image]\"; filename=\"download.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Update Article", "id"=>"4"}
+  [1m[35mArticle Load (0.0ms)[0m  SELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mTag Load (0.0ms)[0m  SELECT  "tags".* FROM "tags"  WHERE "tags"."name" = 'tag2' LIMIT 1
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT  "tags".* FROM "tags"  WHERE "tags"."name" = 'tag4' LIMIT 1[0m
+  [1m[35mTag Load (1.0ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."article_id" = ?  [["article_id", 4]]
+Command :: file -b --mime "C:/Users/VIPULS~1/AppData/Local/Temp/fd456406745d816a45cae554c788e75420150122-7688-12zenpf.jpg"
+[paperclip] Content Type Spoof: Filename download.jpg (["image/jpeg"]), content type discovered from file command: . See documentation to allow this combination.
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+Completed 500 Internal Server Error in 88ms
+
+NoMethodError (undefined method `image_content_type' for #<Article:0x4b74250>):
+  app/controllers/articles_controller.rb:38:in `update'
+
+
+  Rendered c:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered c:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered c:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered c:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (133.1ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_article_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_article_id' AND type='index'
+[0m
+  [1m[35m (1.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_taggings_on_tag_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_taggings_on_tag_id' AND type='index'
+
+  [1m[36m (0.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_taggings_on_article_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_taggings_on_article_id' AND type='index'
+[0m
+
+
+Started PATCH "/articles/4" for 127.0.0.1 at 2015-01-22 15:32:08 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArticlesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0mGd2fTnx8GnDW93JvA5Opq2G1riUTpzLCUV38PCRB0=", "article"=>{"title"=>"Laptops", "body"=>"It is a computer build in one piece", "tag_list"=>"tag2, tag4", "image"=>#<ActionDispatch::Http::UploadedFile:0x581c100 @tempfile=#<File:C:/Users/VIPULS~1/AppData/Local/Temp/RackMultipart20150122-5288-xhxiao>, @original_filename="download.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"article[image]\"; filename=\"download.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Update Article", "id"=>"4"}
+  [1m[35mArticle Load (1.0ms)[0m  SELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mTag Load (0.0ms)[0m  SELECT  "tags".* FROM "tags"  WHERE "tags"."name" = 'tag2' LIMIT 1
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT  "tags".* FROM "tags"  WHERE "tags"."name" = 'tag4' LIMIT 1[0m
+  [1m[35mTag Load (0.0ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."article_id" = ?  [["article_id", 4]]
+Command :: file -b --mime "C:/Users/VIPULS~1/AppData/Local/Temp/fd456406745d816a45cae554c788e75420150122-5288-ffwaz.jpg"
+[paperclip] Content Type Spoof: Filename download.jpg (["image/jpeg"]), content type discovered from file command: . See documentation to allow this combination.
+Command :: file -b --mime "C:/Users/VIPULS~1/AppData/Local/Temp/fd456406745d816a45cae554c788e75420150122-5288-1fg3eq1.jpg"
+[paperclip] Content Type Spoof: Filename download.jpg (["image/jpeg"]), content type discovered from file command: . See documentation to allow this combination.
+  [1m[36m (1.0ms)[0m  [1mrollback transaction[0m
+Redirected to http://localhost:3000/articles/4
+Completed 302 Found in 656ms (ActiveRecord: 5.0ms)
+
+
+Started GET "/articles/4" for 127.0.0.1 at 2015-01-22 15:32:09 +0530
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mArticle Load (0.0ms)[0m  SELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mTag Load (1.0ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."article_id" = ?[0m  [["article_id", 4]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments"  WHERE "comments"."article_id" = ?  [["article_id", 4]]
+  [1m[36mComment Load (1.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."article_id" = ?[0m  [["article_id", 4]]
+  Rendered articles/_comment.html.erb (2.0ms)
+  Rendered comments/_form.html.erb (62.1ms)
+  Rendered articles/show.html.erb within layouts/application (114.1ms)
+Completed 200 OK in 486ms (Views: 468.4ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-22 15:32:10 +0530
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2015-01-22 15:32:10 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-22 15:32:10 +0530
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2015-01-22 15:32:10 +0530
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-22 15:32:10 +0530
+
+
+Started GET "/assets/screen.css?body=1" for 127.0.0.1 at 2015-01-22 15:32:10 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-22 15:32:10 +0530
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2015-01-22 15:32:10 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-22 15:32:10 +0530
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-22 15:32:10 +0530
+
+
+Started GET "/assets/tags.js?body=1" for 127.0.0.1 at 2015-01-22 15:32:10 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-22 15:32:10 +0530
+
+
+Started GET "/articles/4/edit" for 127.0.0.1 at 2015-01-22 15:32:22 +0530
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mArticle Load (1.0ms)[0m  SELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."article_id" = ?[0m  [["article_id", 4]]
+  Rendered articles/_form.html.erb (16.0ms)
+  Rendered articles/edit.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 163ms (Views: 161.1ms | ActiveRecord: 1.0ms)
+
+
+Started PATCH "/articles/4" for 127.0.0.1 at 2015-01-22 15:32:32 +0530
+Processing by ArticlesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0mGd2fTnx8GnDW93JvA5Opq2G1riUTpzLCUV38PCRB0=", "article"=>{"title"=>"Laptops", "body"=>"It is a computer build in one piece", "tag_list"=>"tag2, tag4", "image"=>#<ActionDispatch::Http::UploadedFile:0x4c7e788 @tempfile=#<File:C:/Users/VIPULS~1/AppData/Local/Temp/RackMultipart20150122-5288-mmgw6z>, @original_filename="download.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"article[image]\"; filename=\"download.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Update Article", "id"=>"4"}
+  [1m[35mArticle Load (0.0ms)[0m  SELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mTag Load (0.0ms)[0m  SELECT  "tags".* FROM "tags"  WHERE "tags"."name" = 'tag2' LIMIT 1
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT  "tags".* FROM "tags"  WHERE "tags"."name" = 'tag4' LIMIT 1[0m
+  [1m[35mTag Load (0.0ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."article_id" = ?  [["article_id", 4]]
+Command :: file -b --mime "C:/Users/VIPULS~1/AppData/Local/Temp/fd456406745d816a45cae554c788e75420150122-5288-12n1k1f.jpg"
+[paperclip] Content Type Spoof: Filename download.jpg (["image/jpeg"]), content type discovered from file command: . See documentation to allow this combination.
+Command :: file -b --mime "C:/Users/VIPULS~1/AppData/Local/Temp/fd456406745d816a45cae554c788e75420150122-5288-e4e9s8.jpg"
+[paperclip] Content Type Spoof: Filename download.jpg (["image/jpeg"]), content type discovered from file command: . See documentation to allow this combination.
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+Redirected to http://localhost:3000/articles/4
+Completed 302 Found in 214ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/4" for 127.0.0.1 at 2015-01-22 15:32:32 +0530
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mArticle Load (0.0ms)[0m  SELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."article_id" = ?[0m  [["article_id", 4]]
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "comments"  WHERE "comments"."article_id" = ?  [["article_id", 4]]
+  [1m[36mComment Load (0.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."article_id" = ?[0m  [["article_id", 4]]
+  Rendered articles/_comment.html.erb (1.0ms)
+  Rendered comments/_form.html.erb (2.0ms)
+  Rendered articles/show.html.erb within layouts/application (53.0ms)
+Completed 200 OK in 211ms (Views: 207.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2015-01-22 15:32:32 +0530
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-22 15:32:32 +0530
+
+
+Started GET "/assets/screen.css?body=1" for 127.0.0.1 at 2015-01-22 15:32:32 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-22 15:32:32 +0530
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2015-01-22 15:32:33 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-22 15:32:33 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-22 15:32:33 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-22 15:32:33 +0530
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2015-01-22 15:32:33 +0530
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-22 15:32:33 +0530
+
+
+Started GET "/assets/tags.js?body=1" for 127.0.0.1 at 2015-01-22 15:32:33 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-22 15:32:33 +0530
+
+
+Started GET "/articles/4" for 127.0.0.1 at 2015-01-22 15:39:29 +0530
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mArticle Load (1.0ms)[0m  SELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."article_id" = ?[0m  [["article_id", 4]]
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "comments"  WHERE "comments"."article_id" = ?  [["article_id", 4]]
+  [1m[36mComment Load (0.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."article_id" = ?[0m  [["article_id", 4]]
+  Rendered articles/_comment.html.erb (1.0ms)
+  Rendered comments/_form.html.erb (3.0ms)
+  Rendered articles/show.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 175ms (Views: 171.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2015-01-22 15:39:30 +0530
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-22 15:39:30 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-22 15:39:30 +0530
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2015-01-22 15:39:30 +0530
+
+
+Started GET "/assets/screen.css?body=1" for 127.0.0.1 at 2015-01-22 15:39:30 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-22 15:39:30 +0530
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2015-01-22 15:39:30 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-22 15:39:30 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-22 15:39:30 +0530
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-22 15:39:30 +0530
+
+
+Started GET "/assets/tags.js?body=1" for 127.0.0.1 at 2015-01-22 15:39:30 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-22 15:39:30 +0530
+
+
+Started GET "/articles/4" for 127.0.0.1 at 2015-01-22 15:39:33 +0530
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mArticle Load (0.0ms)[0m  SELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mTag Load (1.0ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."article_id" = ?[0m  [["article_id", 4]]
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "comments"  WHERE "comments"."article_id" = ?  [["article_id", 4]]
+  [1m[36mComment Load (0.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."article_id" = ?[0m  [["article_id", 4]]
+  Rendered articles/_comment.html.erb (1.0ms)
+  Rendered comments/_form.html.erb (5.0ms)
+  Rendered articles/show.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 251ms (Views: 245.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2015-01-22 15:39:33 +0530
+
+
+Started GET "/assets/screen.css?body=1" for 127.0.0.1 at 2015-01-22 15:39:33 +0530
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-22 15:39:33 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-22 15:39:33 +0530
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2015-01-22 15:39:34 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-22 15:39:34 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-22 15:39:34 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-22 15:39:34 +0530
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2015-01-22 15:39:34 +0530
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-22 15:39:34 +0530
+
+
+Started GET "/assets/tags.js?body=1" for 127.0.0.1 at 2015-01-22 15:39:34 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-22 15:39:34 +0530
+
+
+Started GET "/articles/4" for 127.0.0.1 at 2015-01-22 15:39:36 +0530
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mArticle Load (0.0ms)[0m  SELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."article_id" = ?[0m  [["article_id", 4]]
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "comments"  WHERE "comments"."article_id" = ?  [["article_id", 4]]
+  [1m[36mComment Load (0.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."article_id" = ?[0m  [["article_id", 4]]
+  Rendered articles/_comment.html.erb (1.0ms)
+  Rendered comments/_form.html.erb (2.0ms)
+  Rendered articles/show.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 176ms (Views: 172.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2015-01-22 15:39:36 +0530
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-22 15:39:36 +0530
+
+
+Started GET "/assets/screen.css?body=1" for 127.0.0.1 at 2015-01-22 15:39:36 +0530
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2015-01-22 15:39:36 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-22 15:39:36 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-22 15:39:36 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-22 15:39:36 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-22 15:39:36 +0530
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2015-01-22 15:39:37 +0530
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-22 15:39:37 +0530
+
+
+Started GET "/assets/tags.js?body=1" for 127.0.0.1 at 2015-01-22 15:39:37 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-22 15:39:37 +0530
+  [1m[36mArticle Load (0.0ms)[0m  [1mSELECT  "articles".* FROM "articles"   ORDER BY "articles"."id" ASC LIMIT 1[0m
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-22 15:41:08 +0530
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2015-01-22 15:41:08 +0530
+
+
+Started GET "/assets/screen.css?body=1" for 127.0.0.1 at 2015-01-22 15:41:08 +0530
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2015-01-22 15:41:08 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-22 15:41:08 +0530
+
+
+Started GET "/articles/4/edit" for 127.0.0.1 at 2015-01-22 15:41:18 +0530
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mArticle Load (0.0ms)[0m  SELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."article_id" = ?[0m  [["article_id", 4]]
+  Rendered articles/_form.html.erb (10.0ms)
+  Rendered articles/edit.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 169ms (Views: 166.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2015-01-22 15:41:18 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-22 15:41:18 +0530
+
+
+Started GET "/assets/screen.css?body=1" for 127.0.0.1 at 2015-01-22 15:41:18 +0530
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2015-01-22 15:41:18 +0530
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-22 15:41:18 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-22 15:41:18 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-22 15:41:18 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-22 15:41:18 +0530
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2015-01-22 15:41:18 +0530
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-22 15:41:19 +0530
+
+
+Started GET "/assets/tags.js?body=1" for 127.0.0.1 at 2015-01-22 15:41:19 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-22 15:41:19 +0530
+
+
+Started GET "/articles/4/edit" for 127.0.0.1 at 2015-01-22 15:41:30 +0530
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mArticle Load (0.0ms)[0m  SELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."article_id" = ?[0m  [["article_id", 4]]
+  Rendered articles/_form.html.erb (7.0ms)
+  Rendered articles/edit.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 154ms (Views: 151.1ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/articles/4" for 127.0.0.1 at 2015-01-22 15:41:40 +0530
+Processing by ArticlesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0mGd2fTnx8GnDW93JvA5Opq2G1riUTpzLCUV38PCRB0=", "article"=>{"title"=>"Laptops", "body"=>"It is a computer build in one piece", "tag_list"=>"tag2, tag4", "image"=>#<ActionDispatch::Http::UploadedFile:0x5959170 @tempfile=#<File:C:/Users/VIPULS~1/AppData/Local/Temp/RackMultipart20150122-5288-1oz8msg>, @original_filename="download.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"article[image]\"; filename=\"download.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Update Article", "id"=>"4"}
+  [1m[35mArticle Load (0.0ms)[0m  SELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mTag Load (0.0ms)[0m  SELECT  "tags".* FROM "tags"  WHERE "tags"."name" = 'tag2' LIMIT 1
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT  "tags".* FROM "tags"  WHERE "tags"."name" = 'tag4' LIMIT 1[0m
+  [1m[35mTag Load (0.0ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."article_id" = ?  [["article_id", 4]]
+Command :: file -b --mime "C:/Users/VIPULS~1/AppData/Local/Temp/fd456406745d816a45cae554c788e75420150122-5288-7ou2xq.jpg"
+[paperclip] Content Type Spoof: Filename download.jpg (["image/jpeg"]), content type discovered from file command: . See documentation to allow this combination.
+Command :: file -b --mime "C:/Users/VIPULS~1/AppData/Local/Temp/fd456406745d816a45cae554c788e75420150122-5288-zpj25b.jpg"
+[paperclip] Content Type Spoof: Filename download.jpg (["image/jpeg"]), content type discovered from file command: . See documentation to allow this combination.
+  [1m[36m (1.0ms)[0m  [1mrollback transaction[0m
+Redirected to http://localhost:3000/articles/4
+Completed 302 Found in 422ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/articles/4" for 127.0.0.1 at 2015-01-22 15:41:40 +0530
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mArticle Load (0.0ms)[0m  SELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."article_id" = ?[0m  [["article_id", 4]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments"  WHERE "comments"."article_id" = ?  [["article_id", 4]]
+  [1m[36mComment Load (0.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."article_id" = ?[0m  [["article_id", 4]]
+  Rendered articles/_comment.html.erb (1.0ms)
+  Rendered comments/_form.html.erb (3.0ms)
+  Rendered articles/show.html.erb within layouts/application (28.0ms)
+Completed 200 OK in 199ms (Views: 196.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2015-01-22 15:41:40 +0530
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-22 15:41:41 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-22 15:41:41 +0530
+
+
+Started GET "/assets/screen.css?body=1" for 127.0.0.1 at 2015-01-22 15:41:41 +0530
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2015-01-22 15:41:41 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-22 15:41:41 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-22 15:41:41 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-22 15:41:41 +0530
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2015-01-22 15:41:41 +0530
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-22 15:41:41 +0530
+
+
+Started GET "/assets/tags.js?body=1" for 127.0.0.1 at 2015-01-22 15:41:41 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-22 15:41:41 +0530
+
+
+Started GET "/articles/4" for 127.0.0.1 at 2015-01-22 15:42:08 +0530
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mArticle Load (0.0ms)[0m  SELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."article_id" = ?[0m  [["article_id", 4]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments"  WHERE "comments"."article_id" = ?  [["article_id", 4]]
+  [1m[36mComment Load (0.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."article_id" = ?[0m  [["article_id", 4]]
+  Rendered articles/_comment.html.erb (1.0ms)
+  Rendered comments/_form.html.erb (2.0ms)
+  Rendered articles/show.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 172ms (Views: 169.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-22 15:42:08 +0530
+
+
+Started GET "/assets/screen.css?body=1" for 127.0.0.1 at 2015-01-22 15:42:08 +0530
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2015-01-22 15:42:08 +0530
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-22 15:42:08 +0530
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2015-01-22 15:42:08 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-22 15:42:08 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-22 15:42:08 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-22 15:42:08 +0530
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2015-01-22 15:42:08 +0530
+
+
+Started GET "/assets/tags.js?body=1" for 127.0.0.1 at 2015-01-22 15:42:08 +0530
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-22 15:42:08 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-22 15:42:08 +0530
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2015-01-22 15:42:13 +0530
+
+
+Started GET "/assets/screen.css?body=1" for 127.0.0.1 at 2015-01-22 15:42:13 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-22 15:42:13 +0530
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-22 15:42:13 +0530
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2015-01-22 15:42:13 +0530
+
+
+Started GET "/articles/4/edit" for 127.0.0.1 at 2015-01-22 15:46:08 +0530
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mArticle Load (1.0ms)[0m  SELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mTag Load (1.0ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."article_id" = ?[0m  [["article_id", 4]]
+  Rendered articles/_form.html.erb (7.0ms)
+  Rendered articles/edit.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 163ms (Views: 160.1ms | ActiveRecord: 2.0ms)
+
+
+Started PATCH "/articles/4" for 127.0.0.1 at 2015-01-22 15:46:20 +0530
+Processing by ArticlesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0mGd2fTnx8GnDW93JvA5Opq2G1riUTpzLCUV38PCRB0=", "article"=>{"title"=>"Laptops", "body"=>"It is a computer build in one piece", "tag_list"=>"tag2, tag4", "image"=>#<ActionDispatch::Http::UploadedFile:0x58dddb0 @tempfile=#<File:C:/Users/VIPULS~1/AppData/Local/Temp/RackMultipart20150122-5288-zte7pk>, @original_filename="download.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"article[image]\"; filename=\"download.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Update Article", "id"=>"4"}
+  [1m[35mArticle Load (1.0ms)[0m  SELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mTag Load (0.0ms)[0m  SELECT  "tags".* FROM "tags"  WHERE "tags"."name" = 'tag2' LIMIT 1
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT  "tags".* FROM "tags"  WHERE "tags"."name" = 'tag4' LIMIT 1[0m
+  [1m[35mTag Load (0.0ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."article_id" = ?  [["article_id", 4]]
+Command :: file -b --mime "C:/Users/VIPULS~1/AppData/Local/Temp/fd456406745d816a45cae554c788e75420150122-5288-sygxc9.jpg"
+[paperclip] Content Type Spoof: Filename download.jpg (["image/jpeg"]), content type discovered from file command: . See documentation to allow this combination.
+Command :: file -b --mime "C:/Users/VIPULS~1/AppData/Local/Temp/fd456406745d816a45cae554c788e75420150122-5288-gyej08.jpg"
+[paperclip] Content Type Spoof: Filename download.jpg (["image/jpeg"]), content type discovered from file command: . See documentation to allow this combination.
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+Redirected to http://localhost:3000/articles/4
+Completed 302 Found in 308ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/articles/4" for 127.0.0.1 at 2015-01-22 15:46:21 +0530
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mArticle Load (0.0ms)[0m  SELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."article_id" = ?[0m  [["article_id", 4]]
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "comments"  WHERE "comments"."article_id" = ?  [["article_id", 4]]
+  [1m[36mComment Load (0.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."article_id" = ?[0m  [["article_id", 4]]
+  Rendered articles/_comment.html.erb (2.0ms)
+  Rendered comments/_form.html.erb (3.0ms)
+  Rendered articles/show.html.erb within layouts/application (24.0ms)
+Completed 200 OK in 197ms (Views: 192.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2015-01-22 15:46:21 +0530
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-22 15:46:21 +0530
+
+
+Started GET "/assets/screen.css?body=1" for 127.0.0.1 at 2015-01-22 15:46:21 +0530
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2015-01-22 15:46:21 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-22 15:46:21 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-22 15:46:21 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-22 15:46:21 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-22 15:46:21 +0530
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2015-01-22 15:46:22 +0530
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-22 15:46:22 +0530
+
+
+Started GET "/assets/tags.js?body=1" for 127.0.0.1 at 2015-01-22 15:46:22 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-22 15:46:22 +0530
+
+
+Started GET "/articles/4/edit" for 127.0.0.1 at 2015-01-22 15:48:29 +0530
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mArticle Load (0.0ms)[0m  SELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."article_id" = ?[0m  [["article_id", 4]]
+  Rendered articles/_form.html.erb (27.0ms)
+  Rendered articles/edit.html.erb within layouts/application (28.0ms)
+Completed 200 OK in 206ms (Views: 182.2ms | ActiveRecord: 1.0ms)
+
+
+Started PATCH "/articles/4" for 127.0.0.1 at 2015-01-22 15:48:36 +0530
+Processing by ArticlesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0mGd2fTnx8GnDW93JvA5Opq2G1riUTpzLCUV38PCRB0=", "article"=>{"title"=>"Laptops", "body"=>"It is a computer build in one piece", "tag_list"=>"tag2, tag4", "image"=>#<ActionDispatch::Http::UploadedFile:0x59fa8e8 @tempfile=#<File:C:/Users/VIPULS~1/AppData/Local/Temp/RackMultipart20150122-5288-g3hj4e>, @original_filename="download.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"article[image]\"; filename=\"download.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Update Article", "id"=>"4"}
+  [1m[35mArticle Load (0.0ms)[0m  SELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mTag Load (0.0ms)[0m  SELECT  "tags".* FROM "tags"  WHERE "tags"."name" = 'tag2' LIMIT 1
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT  "tags".* FROM "tags"  WHERE "tags"."name" = 'tag4' LIMIT 1[0m
+  [1m[35mTag Load (0.0ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."article_id" = ?  [["article_id", 4]]
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+Completed 500 Internal Server Error in 33ms
+
+Paperclip::Errors::MissingRequiredValidatorError (Paperclip::Errors::MissingRequiredValidatorError):
+  app/controllers/articles_controller.rb:38:in `update'
+
+
+  Rendered c:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered c:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered c:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered c:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (158.1ms)
+
+
+Started PATCH "/articles/4" for 127.0.0.1 at 2015-01-22 15:49:49 +0530
+Processing by ArticlesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0mGd2fTnx8GnDW93JvA5Opq2G1riUTpzLCUV38PCRB0=", "article"=>{"title"=>"Laptops", "body"=>"It is a computer build in one piece", "tag_list"=>"tag2, tag4", "image"=>#<ActionDispatch::Http::UploadedFile:0x594aff8 @tempfile=#<File:C:/Users/VIPULS~1/AppData/Local/Temp/RackMultipart20150122-5288-1x281bx>, @original_filename="download.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"article[image]\"; filename=\"download.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Update Article", "id"=>"4"}
+  [1m[35mArticle Load (0.0ms)[0m  SELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mTag Load (0.0ms)[0m  SELECT  "tags".* FROM "tags"  WHERE "tags"."name" = 'tag2' LIMIT 1
+  [1m[36mTag Load (1.0ms)[0m  [1mSELECT  "tags".* FROM "tags"  WHERE "tags"."name" = 'tag4' LIMIT 1[0m
+  [1m[35mTag Load (0.0ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."article_id" = ?  [["article_id", 4]]
+Command :: file -b --mime "C:/Users/VIPULS~1/AppData/Local/Temp/fd456406745d816a45cae554c788e75420150122-5288-1gxa0no.jpg"
+[paperclip] Content Type Spoof: Filename download.jpg (["image/jpeg"]), content type discovered from file command: . See documentation to allow this combination.
+Command :: file -b --mime "C:/Users/VIPULS~1/AppData/Local/Temp/fd456406745d816a45cae554c788e75420150122-5288-zknffy.jpg"
+[paperclip] Content Type Spoof: Filename download.jpg (["image/jpeg"]), content type discovered from file command: . See documentation to allow this combination.
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+Redirected to http://localhost:3000/articles/4
+Completed 302 Found in 294ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/articles/4" for 127.0.0.1 at 2015-01-22 15:49:49 +0530
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mArticle Load (0.0ms)[0m  SELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mTag Load (1.0ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."article_id" = ?[0m  [["article_id", 4]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments"  WHERE "comments"."article_id" = ?  [["article_id", 4]]
+  [1m[36mComment Load (0.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."article_id" = ?[0m  [["article_id", 4]]
+  Rendered articles/_comment.html.erb (1.0ms)
+  Rendered comments/_form.html.erb (3.0ms)
+  Rendered articles/show.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 235ms (Views: 218.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2015-01-22 15:49:49 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-22 15:49:49 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-22 15:49:49 +0530
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2015-01-22 15:49:49 +0530
+
+
+Started GET "/assets/screen.css?body=1" for 127.0.0.1 at 2015-01-22 15:49:49 +0530
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-22 15:49:49 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-22 15:49:50 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-22 15:49:50 +0530
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2015-01-22 15:49:50 +0530
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-22 15:49:50 +0530
+
+
+Started GET "/assets/tags.js?body=1" for 127.0.0.1 at 2015-01-22 15:49:50 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-22 15:49:50 +0530
+  [1m[35mArticle Load (0.0ms)[0m  SELECT  "articles".* FROM "articles"  WHERE "articles"."id" = 4 LIMIT 1
+
+
+Started GET "/articles/4/edit" for 127.0.0.1 at 2015-01-22 16:00:14 +0530
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mArticle Load (1.0ms)[0m  SELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mTag Load (1.0ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."article_id" = ?[0m  [["article_id", 4]]
+  Rendered articles/_form.html.erb (11.0ms)
+  Rendered articles/edit.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 172ms (Views: 167.1ms | ActiveRecord: 2.0ms)
+
+
+Started PATCH "/articles/4" for 127.0.0.1 at 2015-01-22 16:00:22 +0530
+Processing by ArticlesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0mGd2fTnx8GnDW93JvA5Opq2G1riUTpzLCUV38PCRB0=", "article"=>{"title"=>"Laptops", "body"=>"It is a computer build in one piece", "tag_list"=>"tag2, tag4", "image"=>#<ActionDispatch::Http::UploadedFile:0x4caca30 @tempfile=#<File:C:/Users/VIPULS~1/AppData/Local/Temp/RackMultipart20150122-5288-11axb5i>, @original_filename="download.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"article[image]\"; filename=\"download.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Update Article", "id"=>"4"}
+  [1m[35mArticle Load (1.0ms)[0m  SELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mTag Load (0.0ms)[0m  SELECT  "tags".* FROM "tags"  WHERE "tags"."name" = 'tag2' LIMIT 1
+  [1m[36mTag Load (1.0ms)[0m  [1mSELECT  "tags".* FROM "tags"  WHERE "tags"."name" = 'tag4' LIMIT 1[0m
+  [1m[35mTag Load (0.0ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."article_id" = ?  [["article_id", 4]]
+Command :: file -b --mime "C:/Users/VIPULS~1/AppData/Local/Temp/fd456406745d816a45cae554c788e75420150122-5288-1lezlmk.jpg"
+[paperclip] Content Type Spoof: Filename download.jpg (["image/jpeg"]), content type discovered from file command: . See documentation to allow this combination.
+Command :: file -b --mime "C:/Users/VIPULS~1/AppData/Local/Temp/fd456406745d816a45cae554c788e75420150122-5288-3yuwzp.jpg"
+[paperclip] Content Type Spoof: Filename download.jpg (["image/jpeg"]), content type discovered from file command: . See documentation to allow this combination.
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+Redirected to http://localhost:3000/articles/4
+Completed 302 Found in 418ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/articles/4" for 127.0.0.1 at 2015-01-22 16:00:22 +0530
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mArticle Load (0.0ms)[0m  SELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."article_id" = ?[0m  [["article_id", 4]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments"  WHERE "comments"."article_id" = ?  [["article_id", 4]]
+  [1m[36mComment Load (0.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."article_id" = ?[0m  [["article_id", 4]]
+  Rendered articles/_comment.html.erb (2.0ms)
+  Rendered comments/_form.html.erb (2.0ms)
+  Rendered articles/show.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 283ms (Views: 280.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2015-01-22 16:00:23 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-22 16:00:23 +0530
+
+
+Started GET "/assets/screen.css?body=1" for 127.0.0.1 at 2015-01-22 16:00:23 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-22 16:00:23 +0530
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-22 16:00:23 +0530
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2015-01-22 16:00:23 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-22 16:00:23 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-22 16:00:24 +0530
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2015-01-22 16:00:24 +0530
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-22 16:00:24 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-22 16:00:24 +0530
+
+
+Started GET "/assets/tags.js?body=1" for 127.0.0.1 at 2015-01-22 16:00:24 +0530
+
+
+Started GET "/articles/4/edit" for 127.0.0.1 at 2015-01-22 16:10:04 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mArticle Load (1.0ms)[0m  SELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mTag Load (1.0ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."article_id" = ?[0m  [["article_id", 4]]
+  Rendered articles/_form.html.erb (437.4ms)
+  Rendered articles/edit.html.erb within layouts/application (510.5ms)
+Completed 200 OK in 1483ms (Views: 1355.2ms | ActiveRecord: 2.0ms)
+
+
+Started PATCH "/articles/4" for 127.0.0.1 at 2015-01-22 16:10:14 +0530
+Processing by ArticlesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0mGd2fTnx8GnDW93JvA5Opq2G1riUTpzLCUV38PCRB0=", "article"=>{"title"=>"Laptops", "body"=>"It is a computer build in one piece", "tag_list"=>"tag2, tag4", "image"=>#<ActionDispatch::Http::UploadedFile:0x4cf1ee0 @tempfile=#<File:C:/Users/VIPULS~1/AppData/Local/Temp/RackMultipart20150122-2404-1q6vyuf>, @original_filename="download.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"article[image]\"; filename=\"download.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Update Article", "id"=>"4"}
+  [1m[35mArticle Load (1.0ms)[0m  SELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mTag Load (0.0ms)[0m  SELECT  "tags".* FROM "tags"  WHERE "tags"."name" = 'tag2' LIMIT 1
+  [1m[36mTag Load (1.0ms)[0m  [1mSELECT  "tags".* FROM "tags"  WHERE "tags"."name" = 'tag4' LIMIT 1[0m
+  [1m[35mTag Load (0.0ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."article_id" = ?  [["article_id", 4]]
+Command :: file -b --mime "C:/Users/VIPULS~1/AppData/Local/Temp/fd456406745d816a45cae554c788e75420150122-2404-1epebzg.jpg"
+Command :: file -b --mime "C:/Users/VIPULS~1/AppData/Local/Temp/fd456406745d816a45cae554c788e75420150122-2404-1d45xqu.jpg"
+Binary data inserted for `string` type on column `image_content_type`
+  [1m[36mSQL (24.0ms)[0m  [1mUPDATE "articles" SET "image_content_type" = ?, "image_file_name" = ?, "image_file_size" = ?, "updated_at" = ? WHERE "articles"."id" = 4[0m  [["image_content_type", "image/jpeg"], ["image_file_name", "download.jpg"], ["image_file_size", 2608], ["updated_at", "2015-01-22 10:40:15.115435"]]
+  [1m[35m (227.2ms)[0m  commit transaction
+Redirected to http://localhost:3000/articles/4
+Completed 302 Found in 1301ms (ActiveRecord: 253.2ms)
+
+
+Started GET "/articles/4" for 127.0.0.1 at 2015-01-22 16:10:15 +0530
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.0ms)[0m  [1mSELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mTag Load (0.0ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."article_id" = ?  [["article_id", 4]]
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "comments"  WHERE "comments"."article_id" = ?[0m  [["article_id", 4]]
+  [1m[35mComment Load (1.0ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."article_id" = ?  [["article_id", 4]]
+  Rendered articles/_comment.html.erb (22.0ms)
+  Rendered comments/_form.html.erb (85.1ms)
+  Rendered articles/show.html.erb within layouts/application (259.2ms)
+Completed 200 OK in 841ms (Views: 809.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2015-01-22 16:10:16 +0530
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-22 16:10:17 +0530
+
+
+Started GET "/assets/screen.css?body=1" for 127.0.0.1 at 2015-01-22 16:10:17 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-22 16:10:17 +0530
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2015-01-22 16:10:17 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-22 16:10:17 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-22 16:10:18 +0530
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2015-01-22 16:10:18 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-22 16:10:18 +0530
+
+
+Started GET "/assets/tags.js?body=1" for 127.0.0.1 at 2015-01-22 16:10:18 +0530
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-22 16:10:18 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-22 16:10:18 +0530
+
+
+Started GET "/articles/4/edit" for 127.0.0.1 at 2015-01-22 16:13:45 +0530
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (1.0ms)[0m  [1mSELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mTag Load (0.0ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."article_id" = ?  [["article_id", 4]]
+  Rendered articles/_form.html.erb (14.0ms)
+  Rendered articles/edit.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 192ms (Views: 187.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/articles/" for 127.0.0.1 at 2015-01-22 16:13:52 +0530
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.0ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 159ms (Views: 158.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2015-01-22 16:13:52 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-22 16:13:52 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-22 16:13:52 +0530
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2015-01-22 16:13:52 +0530
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-22 16:13:52 +0530
+
+
+Started GET "/assets/screen.css?body=1" for 127.0.0.1 at 2015-01-22 16:13:52 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-22 16:13:52 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-22 16:13:52 +0530
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2015-01-22 16:13:52 +0530
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-22 16:13:52 +0530
+
+
+Started GET "/assets/tags.js?body=1" for 127.0.0.1 at 2015-01-22 16:13:52 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-22 16:13:52 +0530
+
+
+Started GET "/articles/6" for 127.0.0.1 at 2015-01-22 16:13:54 +0530
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mArticle Load (0.0ms)[0m  SELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."article_id" = ?[0m  [["article_id", 6]]
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "comments"  WHERE "comments"."article_id" = ?  [["article_id", 6]]
+  Rendered articles/_comment.html.erb (0.0ms)
+  Rendered comments/_form.html.erb (3.0ms)
+  Rendered articles/show.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 168ms (Views: 164.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/images/original/missing.png" for 127.0.0.1 at 2015-01-22 16:13:54 +0530
+
+ActionController::RoutingError (No route matches [GET] "/images/original/missing.png"):
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  c:/Ruby193/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered c:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered c:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.0ms)
+  Rendered c:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (10.0ms)
+  Rendered c:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (197.2ms)
+
+
+Started GET "/articles/6/edit" for 127.0.0.1 at 2015-01-22 16:13:58 +0530
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mArticle Load (0.0ms)[0m  [1mSELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mTag Load (1.0ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."article_id" = ?  [["article_id", 6]]
+  Rendered articles/_form.html.erb (7.0ms)
+  Rendered articles/edit.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 161ms (Views: 157.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/articles/6/edit" for 127.0.0.1 at 2015-01-22 16:14:45 +0530
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mArticle Load (1.0ms)[0m  [1mSELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mTag Load (1.0ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."article_id" = ?  [["article_id", 6]]
+  Rendered articles/_form.html.erb (11.0ms)
+  Rendered articles/edit.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 215ms (Views: 211.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2015-01-22 16:14:45 +0530
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2015-01-22 16:14:45 +0530
+
+
+Started GET "/assets/screen.css?body=1" for 127.0.0.1 at 2015-01-22 16:14:45 +0530
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-22 16:14:45 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-22 16:14:45 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-22 16:14:45 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-22 16:14:45 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-22 16:14:46 +0530
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2015-01-22 16:14:46 +0530
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-22 16:14:46 +0530
+
+
+Started GET "/assets/tags.js?body=1" for 127.0.0.1 at 2015-01-22 16:14:46 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-22 16:14:46 +0530
+
+
+Started GET "/articles/" for 127.0.0.1 at 2015-01-22 16:14:48 +0530
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.0ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 152ms (Views: 151.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-22 16:14:49 +0530
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2015-01-22 16:14:49 +0530
+
+
+Started GET "/assets/screen.css?body=1" for 127.0.0.1 at 2015-01-22 16:14:49 +0530
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-22 16:14:49 +0530
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2015-01-22 16:14:49 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-22 16:14:49 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-22 16:14:49 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-22 16:14:49 +0530
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2015-01-22 16:14:49 +0530
+
+
+Started GET "/assets/tags.js?body=1" for 127.0.0.1 at 2015-01-22 16:14:49 +0530
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-22 16:14:49 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-22 16:14:49 +0530
+
+
+Started GET "/articles/6" for 127.0.0.1 at 2015-01-22 16:14:51 +0530
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mArticle Load (1.0ms)[0m  SELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."article_id" = ?[0m  [["article_id", 6]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments"  WHERE "comments"."article_id" = ?  [["article_id", 6]]
+  Rendered articles/_comment.html.erb (0.0ms)
+  Rendered comments/_form.html.erb (2.0ms)
+  Rendered articles/show.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 211ms (Views: 209.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/articles/6" for 127.0.0.1 at 2015-01-22 16:17:59 +0530
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mArticle Load (0.0ms)[0m  [1mSELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mTag Load (1.0ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."article_id" = ?  [["article_id", 6]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments"  WHERE "comments"."article_id" = ?[0m  [["article_id", 6]]
+  Rendered articles/_comment.html.erb (0.0ms)
+  Rendered comments/_form.html.erb (4.0ms)
+  Rendered articles/show.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 198ms (Views: 194.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-22 16:17:59 +0530
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2015-01-22 16:17:59 +0530
+
+
+Started GET "/assets/screen.css?body=1" for 127.0.0.1 at 2015-01-22 16:17:59 +0530
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2015-01-22 16:17:59 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-22 16:17:59 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-22 16:17:59 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-22 16:17:59 +0530
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-22 16:17:59 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-22 16:17:59 +0530
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2015-01-22 16:17:59 +0530
+
+
+Started GET "/assets/tags.js?body=1" for 127.0.0.1 at 2015-01-22 16:17:59 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-22 16:18:00 +0530
+
+
+Started GET "/articles/" for 127.0.0.1 at 2015-01-22 16:18:16 +0530
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.0ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 192ms (Views: 191.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2015-01-22 16:18:16 +0530
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-22 16:18:16 +0530
+
+
+Started GET "/assets/screen.css?body=1" for 127.0.0.1 at 2015-01-22 16:18:16 +0530
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2015-01-22 16:18:16 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-22 16:18:16 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-22 16:18:17 +0530
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2015-01-22 16:18:17 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-22 16:18:17 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-22 16:18:17 +0530
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-22 16:18:17 +0530
+
+
+Started GET "/assets/tags.js?body=1" for 127.0.0.1 at 2015-01-22 16:18:17 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-22 16:18:17 +0530
+
+
+Started GET "/articles/6" for 127.0.0.1 at 2015-01-22 16:18:20 +0530
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mArticle Load (1.0ms)[0m  [1mSELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mTag Load (0.0ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."article_id" = ?  [["article_id", 6]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments"  WHERE "comments"."article_id" = ?[0m  [["article_id", 6]]
+  Rendered articles/_comment.html.erb (0.0ms)
+  Rendered comments/_form.html.erb (2.0ms)
+  Rendered articles/show.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 161ms (Views: 158.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/articles/6/edit" for 127.0.0.1 at 2015-01-22 16:18:21 +0530
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mArticle Load (0.0ms)[0m  SELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."article_id" = ?[0m  [["article_id", 6]]
+  Rendered articles/_form.html.erb (7.0ms)
+  Rendered articles/edit.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 163ms (Views: 161.1ms | ActiveRecord: 0.0ms)
